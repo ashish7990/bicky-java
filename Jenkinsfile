@@ -1,13 +1,19 @@
-node {
-    stage('checkoutcode'){
-        git branch: 'main' , url: 'https://github.com/ashish7990/web-app.git'
+pipeline {
+    agent {
+        node {
+            lebel 'jenkins-slave-lebel'
+        }
     }
-    stage('buildcode'){
-        sh '/opt/maven/bin/mvn clean package'
-        
-    }    
-    stage('deploy to tomcat container'){
-        deploy adapters: [tomcat9(url: 'http://18.140.66.218:8080' , credentialsId: 'tomcatcred')] , war: '**/*.war'
-        
+    
+    stages{
+        stage('checkout code') {
+            steps {
+                git branch: 'main', url: 'https://github.com/ashish7990/web-app.git'
+            }
+        }
+        stage('build code') {
+            steps {
+                sh '/opt/maven/bin/mvn clean package'
+            }
     }
-}
+ }
