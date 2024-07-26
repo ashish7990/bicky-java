@@ -1,11 +1,11 @@
 pipeline {
     agent {
         node {
-            label 'jenkins-slave-lebel'
+            label 'jenkins-slave-label'
         }
     }
     
-    stages{
+    stages {
         stage('checkout code') {
             steps {
                 git branch: 'main', url: 'https://github.com/ashish7990/web-app.git'
@@ -15,5 +15,6 @@ pipeline {
             steps {
                 sh '/opt/maven/bin/mvn clean package'
             }
+        }
     }
 }
