@@ -1,9 +1,9 @@
 <html>
 	<head>
-		<title>AVD Group</title>
+		<title>ASHISH</title>
 	</head>
 	<body>
 		<h2 style="background: blue;text-align: center;color: white;">AVD Group</h2>
-		<p>CAshish</p>
+		<p>Welcome to MyApp</p>
 	</body>
 </html>
