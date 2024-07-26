@@ -16,4 +16,4 @@ pipeline {
                 sh '/opt/maven/bin/mvn clean package'
             }
     }
- }
+}
