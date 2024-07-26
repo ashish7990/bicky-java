@@ -7,7 +7,7 @@ node {
         
     }    
     stage('deploy to tomcat container'){
-        deploy adapetrs: [tomcat9(url: 'http://18.140.66.218:8080' , credentialsId: 'tomcatcred')] , war: '**/*.war'
+        deploy adapters: [tomcat9(url: 'http://18.140.66.218:8080' , credentialsId: 'tomcatcred')] , war: '**/*.war'
         
     }
 }
