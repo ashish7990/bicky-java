@@ -1,7 +1,7 @@
 pipeline {
     agent {
         node {
-            lebel 'jenkins-slave-lebel'
+            label 'jenkins-slave-lebel'
         }
     }
     
